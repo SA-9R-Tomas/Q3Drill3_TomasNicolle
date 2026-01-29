@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Average Finder</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+        body {
+            font-family: 'Gupter';font-size: 22px;
+            background-image: url(https://i.pinimg.com/1200x/72/89/db/7289db979e73cfc82a0e3df30e8c046e.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            padding: 40px;
+            max-width: 400px;
+            margin: auto;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(12, 9, 14, 0.1);
+            font-family: 'Aclonica';font-size: 22px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #e5ed51;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #dbca34;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #eacd5c;
+            
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #d6dc71;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        p {
+            font-size: 16px;
+            margin-top: 10px;
+            opacity: 0.5;
+        }
+
+        .hint {
+           text-align: center;
+           font-size: 14px;
+           color: #ffffff;
+           margin-bottom: 15px;
+        }
+
+        
+
+        #average, #result {
+            font-weight: bold;
+            color: #daf130;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Find your average here!</h2>
+
+    <p class="hint">📊 Your result will appear here</p>
+
+    <p>Score 1:</p>
+        <input id="score1" type="text">
+
+    <p>Score 2:</p>
+        <input id="score2" type="text">
+
+
+    <p>Score 3:</p>
+        <input id="score3" type="text">
+
+    <p>Score 4:</p>
+        <input id="score4" type="text">
+
+
+    <button py-click="compute_average">Compute</button>
+
+    <p>Average: <span id="average"></span></p>
+    <p>Passed: <span id="result"></span></p>
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>
